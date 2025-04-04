@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 
 
+
 const App = () => {
 
   return(
@@ -21,6 +22,8 @@ const App = () => {
       <Route path='buy-credit' element={<BuyCredit />}/>
  
    </Routes>
+
+
    </div>
   );
 

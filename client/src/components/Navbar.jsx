@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
 import {Link, useNavigate} from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
 
 
 const Navbar = () => {
+    const {user} = useContext(AppContext)
 
-    const [user,setUser] = useState(null);
+   
     const navigate = useNavigate();
   return (
     <div className='flex items-center justify-between py-4'>
@@ -25,7 +27,7 @@ const Navbar = () => {
             items-center
             gap-2
             sm:gap-3'>
-                <button className='flex items-center gap-2
+                <button onClick={() => navigate('/buy-credit')} className='flex items-center gap-2
                 bg-blue-100 px-4
                 sm:px-6
                 py-1.5
