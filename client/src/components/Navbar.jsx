@@ -33,7 +33,8 @@ const Navbar = () => {
                 py-1.5
                 sm:py-3
                 rounded-full hover:scale-105
-                transition-all duration-700'>
+                transition-all duration-700
+                cursor-pointer'>
                     <img 
                     className='w-5'
                     src={assets.credit_star}/>
