@@ -1,0 +1,108 @@
+  {/* <form className="w-full max-w-xl mt-10">
+  <div className="flex items-center bg-black/70 rounded-full px-4 py-2 shadow-md w-full">
+    <input
+      type="text"
+      placeholder="Describe Your Idea..."
+      className="flex-1 bg-transparent text-white placeholder:text-white outline-none px-4"
+    />
+    <button
+      type="submit"
+      className="bg-zinc-900 text-white 
+      text-sm px-6 py-2 rounded-full 
+       hover:bg-zinc-800 transition"
+    >
+      Generate
+    </button>
+  </div>
+</form> */}
+
+
+
+  <button
+      type="submit"
+      className="bg-black text-white px-6 py-3 
+      rounded-full shadow-inner  transition-all
+      cursor-pointer"
+    >
+      Generate
+    </button>
+
+
+
+
+    final version and why it worked
+
+     <button
+      type="submit"
+      className='bg-zinc-900 text-white 
+      text-sm px-10 py-3.5 rounded-full 
+       hover:bg-zinc-800 transition'
+    >
+      Generate
+    </button>
+
+    i just had to play with the damn padding
+
+
+
+
+
+
+
+
+    import React from 'react'
+import { assets } from '../assets/assets';
+
+const Result = () => {
+  return (
+   <>
+   <div className='flex flex-col min-h-[90vh] items-center justify-center'>
+     <div className='relative'>
+      <img className='max-w-sm 
+      rounded' src={assets.sample_img_2}/>
+      <span className='absolute bg-blue-500 bottom-0 left-0 h-1
+      w-full transition-all duration-[10s]'/>
+
+     </div>
+
+     <p>Loading...</p>
+   
+<form className="w-full max-w-xl mt-10">
+  <div className="flex items-center w-full rounded-full bg-black/70 px-2 py-1 pr-1">
+    <input
+      type="text"
+      placeholder="Describe what you want to generate"
+      className="flex-1 bg-transparent text-white placeholder-white px-6 py-3 outline-none"
+    />
+    <button
+      type="submit"
+      className='bg-zinc-900 text-white 
+      text-sm px-10 py-3.5 rounded-full 
+       hover:bg-zinc-800 transition'
+    >
+      Generate
+    </button>
+  </div>
+</form>
+
+<div className='flex gap-2 justify-center text-gray text-sm 
+p-0.5 mt-10 rounded-full text-white '>
+  <p className='bg-transparent
+  border border-zinc-900 text-black px-10 py-3 
+  rounded-full cursor-pointer '>Generate Another</p>
+ <a className='bg-zinc-900 px-10 py-3
+ rounded-full cursor-pointer' href='/' download> Download</a>
+</div>
+    
+    </div>
+
+   
+
+    </>
+  )
+}
+
+export default Result;
+
+
+
