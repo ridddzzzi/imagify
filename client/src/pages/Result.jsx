@@ -1,6 +1,6 @@
 import {React,useState} from 'react'
 import { assets } from '../assets/assets';
-
+import { motion,delay } from 'motion/react';
 const Result = () => {
  const [image,setImage] = useState(assets.sample_img_2)
  const [isImageLoaded,setisImageLoaded] = useState(true)
@@ -13,7 +13,13 @@ const Result = () => {
 
   return (
    <>
-   <div className='flex flex-col min-h-[90vh] items-center justify-center'>
+   <motion.div
+   
+   initial={{opacity:0.2,y:100}}
+   transition={{duration:1}}
+   whileInView={{opacity:1,y:0}}
+   viewport={{once:true}}
+   className='flex flex-col min-h-[90vh] items-center justify-center'>
      <div className='relative'>
       <img className='max-w-sm 
       rounded' src={image}/>
@@ -70,7 +76,7 @@ p-0.5 mt-10 rounded-full text-white '>
 
    }
     
-    </div>
+    </motion.div>
 
    
 
