@@ -64,7 +64,42 @@ import jwt from 'jsonwebtoken' //for authentication
 
 }
 
-export {loginUser,registerUser}
+// const userCredits = async (req,res) => {
+//     try{
+//         const {userId} = req.body
+//         //we need this userid in the body. but we will not take it directly, but using middleware
+//         //reason is security. when need to understand more, copy paste this try block in chatgpt
+//         const user = await userModel.findById(userId)
+//         res.json({success:true,
+//             credits:user.creditBalance,
+//             user: {name: user.name}
+//         })
+         
+//     } catch (error) {
+//         console.log(error.message)
+//         res.json({success:false, message:error.message})
+
+//     }
+
+// }
+const userCredits = async (req, res) => {
+    try {
+      const userId = req.userId;
+      const user = await userModel.findById(userId);
+  
+      res.json({
+        success: true,
+        credits: user.creditBalance,
+        user: { name: user.name },
+      });
+    } catch (error) {
+      console.error(error.message);
+      res.json({ success: false, message: error.message });
+    }
+  };
+  
+  
+export {loginUser,registerUser,userCredits}
 
 
 
